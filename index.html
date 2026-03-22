@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆款文案助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>爆款文案助手</h1>
+        <p>专为新传/广告/汉语言专业大学生、新媒体运营实习生打造</p>
+    </header>
+    
+    <main>
+        <!-- 功能导航 -->
+        <nav class="module-nav">
+            <button class="nav-btn active" data-module="short-video">短视频脚本</button>
+            <button class="nav-btn" data-module="xiaohongshu">小红书推文</button>
+            <button class="nav-btn" data-module="wechat">公众号推文</button>
+            <button class="nav-btn" data-module="brand">品牌文案</button>
+        </nav>
+        
+        <!-- 功能模块 -->
+        <div class="module-container">
+            <!-- 短视频脚本生成模块 -->
+            <div id="short-video" class="module active">
+                <h2>短视频脚本生成</h2>
+                <form id="short-video-form">
+                    <div class="form-group">
+                        <label>平台</label>
+                        <select name="platform" required>
+                            <option value="抖音">抖音</option>
+                            <option value="视频号">视频号</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>视频主题/产品卖点</label>
+                        <textarea name="topic" rows="3" required placeholder="请输入视频主题或产品卖点"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>目标受众</label>
+                        <input type="text" name="audience" required placeholder="例如：年轻女性、职场人士等">
+                    </div>
+                    <div class="form-group">
+                        <label>视频时长</label>
+                        <select name="duration" required>
+                            <option value="15s">15秒</option>
+                            <option value="30s">30秒</option>
+                            <option value="60s">60秒</option>
+                            <option value="90s">90秒</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>风格调性</label>
+                        <input type="text" name="style" required placeholder="例如：轻松幽默、专业权威、温情治愈等">
+                    </div>
+                    <div class="form-group">
+                        <label>赛道选择</label>
+                        <select name="track" required>
+                            <option value="美妆">美妆</option>
+                            <option value="美食">美食</option>
+                            <option value="职场">职场</option>
+                            <option value="干货">干货</option>
+                            <option value="校园">校园</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>额外要求</label>
+                        <textarea name="requirements" rows="2" placeholder="请输入其他特殊要求"></textarea>
+                    </div>
+                    <button type="submit" class="generate-btn">生成脚本</button>
+                </form>
+            </div>
+            
+            <!-- 小红书推文生成模块 -->
+            <div id="xiaohongshu" class="module">
+                <h2>小红书推文生成</h2>
+                <form id="xiaohongshu-form">
+                    <div class="form-group">
+                        <label>笔记主题/产品卖点</label>
+                        <textarea name="topic" rows="3" required placeholder="请输入笔记主题或产品卖点"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>目标受众</label>
+                        <input type="text" name="audience" required placeholder="例如：年轻女性、职场人士等">
+                    </div>
+                    <div class="form-group">
+                        <label>笔记类型</label>
+                        <select name="type" required>
+                            <option value="种草">种草</option>
+                            <option value="干货">干货</option>
+                            <option value="测评">测评</option>
+                            <option value="日常">日常</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>风格调性</label>
+                        <input type="text" name="style" required placeholder="例如：轻松幽默、专业权威、温情治愈等">
+                    </div>
+                    <div class="form-group">
+                        <label>额外要求</label>
+                        <textarea name="requirements" rows="2" placeholder="请输入其他特殊要求"></textarea>
+                    </div>
+                    <button type="submit" class="generate-btn">生成笔记</button>
+                </form>
+            </div>
+            
+            <!-- 公众号推文生成模块 -->
+            <div id="wechat" class="module">
+                <h2>公众号推文生成</h2>
+                <form id="wechat-form">
+                    <div class="form-group">
+                        <label>文章主题</label>
+                        <textarea name="topic" rows="3" required placeholder="请输入文章主题"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>目标受众</label>
+                        <input type="text" name="audience" required placeholder="例如：年轻女性、职场人士等">
+                    </div>
+                    <div class="form-group">
+                        <label>文章类型</label>
+                        <select name="type" required>
+                            <option value="干货">干货</option>
+                            <option value="情感">情感</option>
+                            <option value="品牌">品牌</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>额外要求</label>
+                        <textarea name="requirements" rows="2" placeholder="请输入其他特殊要求"></textarea>
+                    </div>
+                    <button type="submit" class="generate-btn">生成推文</button>
+                </form>
+            </div>
+            
+            <!-- 品牌文案生成模块 -->
+            <div id="brand" class="module">
+                <h2>品牌文案生成</h2>
+                <form id="brand-form">
+                    <div class="form-group">
+                        <label>品牌/产品名称</label>
+                        <input type="text" name="name" required placeholder="请输入品牌或产品名称">
+                    </div>
+                    <div class="form-group">
+                        <label>核心卖点</label>
+                        <textarea name="selling-points" rows="3" required placeholder="请输入核心卖点"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>目标受众</label>
+                        <input type="text" name="audience" required placeholder="例如：年轻女性、职场人士等">
+                    </div>
+                    <div class="form-group">
+                        <label>使用场景</label>
+                        <input type="text" name="scene" required placeholder="例如：日常使用、职场办公、休闲娱乐等">
+                    </div>
+                    <div class="form-group">
+                        <label>文案类型</label>
+                        <select name="type" required>
+                            <option value="slogan">Slogan</option>
+                            <option value="产品介绍">产品介绍</option>
+                            <option value="品牌故事">品牌故事</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="generate-btn">生成文案</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- 结果展示区 -->
+        <div id="result-container" class="hidden">
+            <h2>生成结果</h2>
+            <div id="result-content"></div>
+            <div class="result-actions">
+                <button id="copy-btn">一键复制</button>
+                <button id="regenerate-btn">重新生成</button>
+                <button id="edit-btn">在线编辑</button>
+                <button id="save-btn">本地保存</button>
+            </div>
+        </div>
+        
+        <!-- 历史记录 -->
+        <div id="history-container" class="hidden">
+            <h2>我的作品历史</h2>
+            <div id="history-list"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 爆款文案助手 | 专为内容创作者打造</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
